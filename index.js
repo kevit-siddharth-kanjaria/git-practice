@@ -15,6 +15,11 @@ app.post('/', function (req, res) {
    res.send('Hello POST');
 })
 
+app.get('/', function (req, res) {
+    console.log("Got a GET request for the homepage");
+    const userCount = Math.ceil(Math.random() * 100);
+    res.send(`Hello GET. Users are: ${userCount}`);
+ })
 
 // This responds a DELETE request for the /del_user page.
 app.delete('/del_user', function (req, res) {
